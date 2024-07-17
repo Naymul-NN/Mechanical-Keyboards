@@ -1,8 +1,9 @@
+import NavBar from "../components/home/Navbar";
 
 const Layout = () => { 
 return ( 
      <div>
-          <h1> This is Layout page .. </h1>
+          <NavBar></NavBar>
      </div>
 );
 };
