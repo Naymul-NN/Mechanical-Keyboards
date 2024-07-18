@@ -7,14 +7,15 @@ const NavBar = () => {
    
     const link = <>
         <li className="font-bold"><Link to="/"> Home</Link></li>
-        <li className="font-bold"><Link to="/community"> Community</Link></li>
-        <li className="font-bold"><Link to="/aboutus">About Us</Link></li>
-        <li className="font-bold"><Link to="/contactus">Contact Us</Link></li>
+        <li className="font-bold"><Link to="/products"> Products</Link></li>
+        <li className="font-bold"><Link to="/about">About Us</Link></li>
+        <li className="font-bold"><Link to="/contact">Contact Us</Link></li>
+        <li className="font-bold"><Link to="/pmanagement">Dashboard</Link></li>
 
     </>
     
     return (
-        <div className="w-[600px]">
+        <div className="">
             <div className="navbar fixed z-10 bg-opacity-50 bg-slate-300 lg:w-[90%] ">
                 <div className="navbar-start">
                     <div className="dropdown">
