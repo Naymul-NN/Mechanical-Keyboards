@@ -11,12 +11,11 @@ const NavBar = () => {
         <li className="font-bold"><Link to="/about">About Us</Link></li>
         <li className="font-bold"><Link to="/contact">Contact Us</Link></li>
         <li className="font-bold"><Link to="/pmanagement">Dashboard</Link></li>
-
-    </>
+      </>
     
     return (
         <div className="">
-            <div className="navbar fixed z-10 bg-opacity-50 bg-slate-300 lg:w-[90%] ">
+            <div className="navbar fixed z-10 bg-opacity-50 bg-slate-500 text-white lg:w-[90%] ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">

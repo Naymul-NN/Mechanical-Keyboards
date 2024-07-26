@@ -5,6 +5,7 @@ import Products from "../components/navroutes/Products";
 import About from "../components/navroutes/About";
 import Contact from "../components/navroutes/Contact";
 import PManagement from "../components/navroutes/PManagement";
+import ProductDetails from "../components/home/ProductDetails";
 
 const router = createBrowserRouter([
  {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
         {
             path: "/pmanagement",
             element: <PManagement/>
+        },
+        {
+            path: "/productDetails/:id",
+            element: <ProductDetails />
         }
     ]
  }
