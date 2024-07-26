@@ -2,7 +2,6 @@
 import { Link } from "react-router-dom";
 import { FaCartPlus } from "react-icons/fa";
 
-
 const NavBar = () => {
     
    
