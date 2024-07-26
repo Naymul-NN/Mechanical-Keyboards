@@ -1,5 +1,6 @@
 
 import { Link } from "react-router-dom";
+import { FaCartPlus } from "react-icons/fa";
 
 
 const NavBar = () => {
@@ -34,8 +35,8 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-               
-                    <Link to="/register" className="btn btn-secondary">Register</Link>
+                    <Link to="/register" className="text-3xl pr-5"><FaCartPlus />
+                    </Link>
                 </div>
             </div>
         </div>
