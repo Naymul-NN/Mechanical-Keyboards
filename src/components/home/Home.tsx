@@ -1,4 +1,5 @@
 import Brands from "./Brands";
+import CustomarFeedback from "./CustomarFeedback";
 import Hero from "./Hero";
 import Product from "./Product";
 import ServiceAd from "./ServiceAd";
@@ -10,6 +11,7 @@ return (
          <ServiceAd/>
          <Product/>
          <Brands/>
+         <CustomarFeedback/>
      </div>
 );
 };
