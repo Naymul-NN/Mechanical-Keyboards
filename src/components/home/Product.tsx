@@ -17,7 +17,7 @@ export type producPprops = {
 const Product = () => {
 
     const { data } = useGetProductsQuery(undefined);
-    console.log(data?.data)
+   
     return (
         <div>
 
