@@ -13,6 +13,7 @@ const ProductDetails = () => {
             <div className="card bg-slate-200 shadow-xl">
                 <figure><img className="h-[200px] w-[400px] hover:scale-125" src={data?.data?.image} alt="Shoes" /></figure>
                 <div className="card-body text-center">
+                    <h2 className="text-black"><strong>Description: </strong>{data?.data?.description}</h2>
                     <h2 className="text-black"><strong>Title: </strong>{data?.data?.title}</h2>
                     <h2 className="text-black"><strong>Brand: </strong>{data?.data?.brand}</h2>
                     <h2 className="text-black"><strong>Price: </strong>{data?.data?.price}$</h2>

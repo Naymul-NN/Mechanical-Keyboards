@@ -12,6 +12,15 @@ export const baseApi = createApi({
             }),
             providesTags: ['product'],
         }),
+        getAllProducts: builder.query({
+            query: () => ({
+                url: `api/v1/product/getAll`,
+                method: 'GET',
+            }),
+            providesTags: ['product'],
+        }),
+
+
         getSingleProduct: builder.query({
             query: (id) => ({
                 url: `api/v1/product/${id}`,
@@ -24,4 +33,4 @@ export const baseApi = createApi({
     })
 
 
-    export const {useGetProductsQuery,useGetSingleProductQuery} = baseApi;
+    export const {useGetProductsQuery,useGetSingleProductQuery,useGetAllProductsQuery} = baseApi;
