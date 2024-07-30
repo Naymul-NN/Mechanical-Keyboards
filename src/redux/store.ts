@@ -1,10 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { baseApi } from './api/api'
+import searchReducer from "./features/searchSlice";
+import filterReducer from "./features/filterSlice";
+import sortReducer from "./features/sortSlice";
 
 export const store = configureStore({
  
   reducer: {
     [baseApi.reducerPath] : baseApi.reducer,
+    search: searchReducer,
+        filter: filterReducer,
+        sort: sortReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(baseApi.middleware),

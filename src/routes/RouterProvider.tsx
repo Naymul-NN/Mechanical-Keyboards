@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../layout/Layout";
 import Home from "../components/home/Home";
-import Products from "../components/navroutes/Products";
 import About from "../components/navroutes/About";
 import Contact from "../components/navroutes/Contact";
 import PManagement from "../components/navroutes/PManagement";
 import ProductDetails from "../components/home/ProductDetails";
+import ALLProducts from "../components/navroutes/ALLProducts";
 
 const router = createBrowserRouter([
  {
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
         },
         {
             path: "/products",
-            element: <Products/>
+            element: <ALLProducts/>
         },
         {
             path: "/about",
