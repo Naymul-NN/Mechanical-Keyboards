@@ -63,7 +63,7 @@ const Products = () => {
     }, [data, searchTerm, priceRange, sortOption]);
 
     const sortOptions = [
-        { value: "", label: "None" },
+        { value: "", label: "Low or High" },
         { value: "price-low-high", label: "Price: Low to High" },
         { value: "price-high-low", label: "Price: High to Low" }
     ];

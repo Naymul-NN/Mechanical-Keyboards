@@ -1,11 +1,12 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+// filterSlice.ts
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface PriceRange {
     min: number;
     max: number;
 }
 
-interface FilterState {
+export interface FilterState {
     priceRange: PriceRange;
 }
 
@@ -14,7 +15,7 @@ const initialState: FilterState = {
 };
 
 const filterSlice = createSlice({
-    name: "filter",
+    name: 'filter',
     initialState,
     reducers: {
         setPriceRange(state, action: PayloadAction<PriceRange>) {

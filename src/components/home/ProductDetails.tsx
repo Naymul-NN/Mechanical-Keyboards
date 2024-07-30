@@ -7,7 +7,7 @@ const ProductDetails = () => {
     const { id } = useParams();
 
     const { data } = useGetSingleProductQuery(id)
-    console.log(data);
+    // console.log(data);
     return (
         <div className="py-24 w-2/3 mx-auto">
             <div className="card bg-slate-200 shadow-xl">
@@ -25,6 +25,7 @@ const ProductDetails = () => {
                         fullSymbol={<FaStar className="icon text-red-500" />}
                         placeholderSymbol={<FaStarHalfAlt className="icon" />}
                     /></h2>
+                    <button className="btn btn-secondary">Add to cart</button>
                 </div>
             </div>
         </div>
