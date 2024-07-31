@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 const ProductDetails = () => {
     const { id } = useParams();
     const { data } = useGetSingleProductQuery(id)
-    // console.log(data);
+  
     const [addCart] = useAddCartMutation();
 
     const handleAddToCart = async () => {
