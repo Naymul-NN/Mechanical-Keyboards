@@ -6,6 +6,7 @@ import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
 
 export type producPprops = {
     _id: string;
+    product?:string
     image: string;
     title: string;
     brand: string;
