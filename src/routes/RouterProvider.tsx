@@ -6,6 +6,7 @@ import Contact from "../components/navroutes/Contact";
 import PManagement from "../components/navroutes/PManagement";
 import ProductDetails from "../components/home/ProductDetails";
 import ALLProducts from "../components/navroutes/ALLProducts";
+import Cart from "../components/cart/Cart";
 
 const router = createBrowserRouter([
  {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
         {
             path: "/productDetails/:id",
             element: <ProductDetails />
+        },
+        {
+            path: "/cart",
+            element: <Cart/>
         }
     ]
  }

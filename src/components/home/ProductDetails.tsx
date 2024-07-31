@@ -22,7 +22,6 @@ const ProductDetails = () => {
         }
     };
 
-
     return (
         <div className="py-24 w-2/3 mx-auto">
             <div className="card bg-slate-200 shadow-xl">
