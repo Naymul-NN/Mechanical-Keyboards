@@ -33,7 +33,7 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to="/register" className="text-3xl pr-5"><FaCartPlus />
+                    <Link to="/cart" className="text-3xl pr-5"><FaCartPlus />
                     </Link>
                 </div>
             </div>
