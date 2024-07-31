@@ -8,17 +8,17 @@ import toast from "react-hot-toast";
 const ProductDetails = () => {
     const { id } = useParams();
     const { data } = useGetSingleProductQuery(id)
-  
+
     const [addCart] = useAddCartMutation();
 
     const handleAddToCart = async () => {
         try {
             await addCart({ product: id }).unwrap();
             toast.success("Product added to cart successfully!");
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (error: any) {
-        //  console.log(error.data.message);
-                toast.error(error.data.message);
+            //  console.log(error.data.message);
+            toast.error(error.data.message);
         }
     };
 
@@ -39,7 +39,7 @@ const ProductDetails = () => {
                         fullSymbol={<FaStar className="icon text-red-500" />}
                         placeholderSymbol={<FaStarHalfAlt className="icon" />}
                     /></h2>
-                 <button onClick={handleAddToCart} className="btn btn-secondary">Add to cart</button>
+                    <button onClick={handleAddToCart} className="btn btn-secondary">Add to cart</button>
                 </div>
             </div>
         </div>

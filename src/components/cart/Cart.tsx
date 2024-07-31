@@ -14,22 +14,22 @@ const Cart = () => {
           );
       }
      
-     
      return (
           <div className="pt-20">
                <div className="overflow-x-auto">
-                    {data?.data.map((item: producPprops) => (
-                         <table key={item._id} className="table">
+                   
+                         <table  className="table">
                               {/* head */}
                               <thead>
                                    <tr>
-                                        <th>Name</th>
-                                        <th>Job</th>
-                                        <th>Favorite Color</th>
-                                        <th></th>
+                                        <th>Name/brand</th>
+                                        <th>price</th>
+                                        <th>see full data</th>
+                                        <th> Actions</th>
                                    </tr>
                               </thead>
-                              <tbody>
+                              {data?.data.map((item: producPprops) => (
+                              <tbody key={item._id}>
                                    {/* row 1 */}
                                    <tr>
                                         <td>
@@ -42,26 +42,23 @@ const Cart = () => {
                                                        </div>
                                                   </div>
                                                   <div>
-                                                       <div className="font-bold">Hart Hagerty</div>
-                                                       <div className="text-sm opacity-50">United States</div>
+                                                       <div className="font-bold">{item?.product?.title}</div>
+                                                       <div className="text-sm opacity-50">{item?.product?.brand}</div>
                                                   </div>
                                              </div>
                                         </td>
                                         <td>
-                                             Zemlak, Daniel and Leannon
-                                             <br />
-                                             <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
+                                            {item.product.price} $
                                         </td>
-                                        <td>Purple</td>
+                                        <td><button className="btn btn-ghost btn-xs">details</button></td>
                                         <th>
-                                             <button className="btn btn-ghost btn-xs">details</button>
+                                        <button className="btn btn-ghost btn-xs">remove</button>
                                         </th>
                                    </tr>
-                                   {/* row 2 */}
                               </tbody>
-                         </table>
                     )
-                    )}
+               )}
+               </table>
 
                </div>
           </div>
