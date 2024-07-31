@@ -2,11 +2,21 @@ import { useGetAllCartQuery } from "../../redux/api/api";
 import { producPprops } from "../home/Product";
 
 const Cart = () => {
-     const { data } = useGetAllCartQuery(undefined);
+     const { data , isLoading} = useGetAllCartQuery(undefined);
      console.log(data?.data);
+         
+     if (isLoading) {
+          return (
+              <div className="flex justify-center items-center min-h-screen">
+                 <span className="loading loading-spinner text-warning"></span>
+                 <span className="loading loading-spinner text-error"></span>
+              </div>
+          );
+      }
+     
+     
      return (
           <div className="pt-20">
-
                <div className="overflow-x-auto">
                     {data?.data.map((item: producPprops) => (
                          <table key={item._id} className="table">

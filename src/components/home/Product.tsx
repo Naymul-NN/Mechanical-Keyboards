@@ -5,8 +5,9 @@ import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
 
 
 export type producPprops = {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    [x: string]: any;
     _id: string;
-    product?:string
     image: string;
     title: string;
     brand: string;
@@ -15,14 +16,12 @@ export type producPprops = {
     rating: number
 
 }
-const Product = () => {
 
+
+const Product = () => {
     const { data } = useGetProductsQuery(undefined);
-   
     return (
         <div>
-
-
             <div className=" grid grid-cols-3 gap-7 justify-evenly items-center pb-10 ">
 
                 {data?.data.map((item: producPprops) => (
