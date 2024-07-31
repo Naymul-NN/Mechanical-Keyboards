@@ -28,9 +28,18 @@ export const baseApi = createApi({
             }),
             providesTags: ['product'],
         }),
+
+        addCart: builder.mutation({
+            query: (data) => ({
+                url: "api/v1/productCart/create-productCart",
+                method: 'POST',
+                body: data,
+            }),
+            invalidatesTags: ["product"],
+        }),
         
     }),
     })
 
 
-    export const {useGetProductsQuery,useGetSingleProductQuery,useGetAllProductsQuery} = baseApi;
+    export const {useGetProductsQuery,useGetSingleProductQuery,useGetAllProductsQuery,useAddCartMutation} = baseApi;

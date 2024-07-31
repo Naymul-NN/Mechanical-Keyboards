@@ -1,13 +1,28 @@
 import { useParams } from "react-router-dom";
-import { useGetSingleProductQuery } from "../../redux/api/api";
+import { useAddCartMutation, useGetSingleProductQuery } from "../../redux/api/api";
 import Rating from "react-rating";
 import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
+import toast from "react-hot-toast";
+
 
 const ProductDetails = () => {
     const { id } = useParams();
-
     const { data } = useGetSingleProductQuery(id)
     // console.log(data);
+    const [addCart] = useAddCartMutation();
+
+    const handleAddToCart = async () => {
+        try {
+            await addCart({ product: id }).unwrap();
+            toast.success("Product added to cart successfully!");
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        } catch (error: any) {
+        //  console.log(error.data.message);
+                toast.error(error.data.message);
+        }
+    };
+
+
     return (
         <div className="py-24 w-2/3 mx-auto">
             <div className="card bg-slate-200 shadow-xl">
@@ -25,7 +40,7 @@ const ProductDetails = () => {
                         fullSymbol={<FaStar className="icon text-red-500" />}
                         placeholderSymbol={<FaStarHalfAlt className="icon" />}
                     /></h2>
-                    <button className="btn btn-secondary">Add to cart</button>
+                 <button onClick={handleAddToCart} className="btn btn-secondary">Add to cart</button>
                 </div>
             </div>
         </div>
