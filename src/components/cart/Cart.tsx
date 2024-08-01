@@ -1,3 +1,4 @@
+
 import { useGetAllCartQuery } from "../../redux/api/api";
 import { producPprops } from "../home/Product";
 
@@ -24,7 +25,6 @@ const Cart = () => {
                                    <tr>
                                         <th>Name/brand</th>
                                         <th>price</th>
-                                        <th>see full data</th>
                                         <th> Actions</th>
                                    </tr>
                               </thead>
@@ -50,7 +50,7 @@ const Cart = () => {
                                         <td>
                                             {item.product.price} $
                                         </td>
-                                        <td><button className="btn btn-ghost btn-xs">details</button></td>
+                                      
                                         <th>
                                         <button className="btn btn-ghost btn-xs">remove</button>
                                         </th>
