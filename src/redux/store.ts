@@ -3,7 +3,8 @@ import { baseApi } from './api/api'
 import searchReducer from "./features/searchSlice";
 import filterReducer from "./features/filterSlice";
 import sortReducer from "./features/sortSlice";
-import cartReducer from "./features/cartSlice"
+import cartReducer from "./features/cartSlice";
+import cartCountReducr from "./features/cartCountSlice"
 export const store = configureStore({
  
   reducer: {
@@ -11,7 +12,9 @@ export const store = configureStore({
         search: searchReducer,
         filter: filterReducer,
         sort: sortReducer,
-        cart: cartReducer
+        cart: cartReducer,
+        cartCount: cartCountReducr
+
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(baseApi.middleware),

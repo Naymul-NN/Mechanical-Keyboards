@@ -1,10 +1,24 @@
 
+import { useEffect } from "react";
 import { useGetAllCartQuery } from "../../redux/api/api";
+import { useAppDispatch } from "../../redux/hooks";
 import { producPprops } from "../home/Product";
+import { setCart } from "../../redux/features/cartCountSlice";
 
 const Cart = () => {
      const { data , isLoading} = useGetAllCartQuery(undefined);
      console.log(data?.data);
+
+     const dispatch = useAppDispatch();
+
+     useEffect(() => {
+       if (data?.data) {
+         dispatch(setCart(data.data));
+       }
+       
+     }, [data, dispatch]);
+
+     
          
      if (isLoading) {
           return (
